@@ -1,0 +1,19 @@
+.main-app {
+  @media screen and (min-width: 0) {
+    display: flex;
+    > section {
+      width: 50%;
+      padding-bottom: 140px;
+    }
+    .text-component {
+      margin-top: 48px;
+    }
+    @font-face {
+      font-family: "Averta Std";
+      src: local("Averta Std"),
+       url("./styles/fonts/AvertaStd-Regular.ttf") format("truetype");
+      
+      }
+  }
+
+}

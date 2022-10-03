@@ -1,0 +1,60 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+.right-side {
+  @media screen and (min-width: 0) {
+    padding: 80px 40px 0;
+    background-color: $light-grey;
+
+    header {
+      position: relative;
+
+      figure {
+        position: absolute;
+        right: 0px;
+        top: -80px;
+        img {
+          height: 138px;
+          width: 138px;
+          border-radius: 50%;
+        }
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 0;
+        font-weight: 100;
+      }
+      h2 {
+        padding: 4px 12px;
+        margin-top: 0;
+        display: inline-block;
+        text-transform: uppercase;
+        background-color: $light-black;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    header + .text-component {
+      margin-top: 24px;
+    }
+    .rating-level {
+      margin-bottom: 4px;
+    }
+    .text-component {
+      position: relative;
+      &:before {
+        width: 29px;
+        content: attr(index);
+        display: block;
+        position: absolute;
+        background-color: #343434;
+        color: white;
+        left: -50px;
+        padding: 0px 2px;
+        font-size: 13px;
+        @include arrow-left;
+      }
+    }
+  }
+}
